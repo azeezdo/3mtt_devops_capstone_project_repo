@@ -30,4 +30,11 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".github\" />
+    <Folder Include=".github\workflows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".github\workflows\main.yml" />
+  </ItemGroup>
 </Project>
