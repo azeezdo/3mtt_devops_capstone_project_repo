@@ -1,0 +1,36 @@
+﻿name: CI/CD Pipeline for .NET Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0'
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build application
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Run tests
+        run: dotnet test --no-build --verbosity normal
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy application
+        run: |
+          # Example deployment script
+          echo "Deploying application..."
