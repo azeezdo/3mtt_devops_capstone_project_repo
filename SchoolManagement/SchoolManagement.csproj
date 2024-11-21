@@ -35,6 +35,6 @@
     <Folder Include=".github\workflows\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".github\workflows\main.yml" />
+    <None Include=".github\workflows\dotnet-ci-cd.yml" />
   </ItemGroup>
 </Project>

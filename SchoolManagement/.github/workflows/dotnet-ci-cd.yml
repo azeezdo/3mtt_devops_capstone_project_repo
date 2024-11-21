@@ -26,11 +26,4 @@ jobs:
       - name: Run tests
         run: dotnet test --no-build --verbosity normal
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy application
-        run: |
-          # Example deployment script
-          echo "Deploying application..."
+ 
